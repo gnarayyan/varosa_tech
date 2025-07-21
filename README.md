@@ -23,9 +23,28 @@ lib/
 - Each folder will follow own architecture & pattern (to meet evaluation criteria) but if some logic is sharable like themes, components, it will be shared from common, core or themes folder. Please don't consider it as anti pattern(I will take this liberty for my easiness (i.e. reusability) )
 
 
-## Development Environemnt
+## Development Environment
 - Flutter: 3.32.7 
 - Dart: 3.8.1
 - OS: Ubuntu 24.04.2 LTS
 - IDE: VS Code
 - Later use MacOS, to make IoS compatible
+
+
+# Apps
+## offline_todo
+### Requirement
+Evaluation:  state management, architecture, local storage SQLite, and async handling.
+Tasks:
+●​ Add/update/delete to-dos.​
+●​ Persist to-dos using SQLite.​
+●​ Handle UI state with Bloc.​
+●​ Optional: Sync to-dos with firebase.
+
+### My Thought Process
+Since todo is a very basic app with just one faeture i.e. to CRUD Todos, so it felt me stupid to go for feature first, so I'll implement `Layer First` folder strcuture. 
+
+### Third party libraries use
+- flutter_bloc: ^9.1.1
+- sqflite: ^2.4.2
+
