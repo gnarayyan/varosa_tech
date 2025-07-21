@@ -44,7 +44,7 @@ Tasks:
 ### My Thought Process
 Since todo is a very basic app with just one faeture i.e. to CRUD Todos, so it felt me stupid to go for feature first, so I'll implement `Layer First` folder strcuture. 
 
-### Third party libraries use
+### Third party libraries use will adjusted later
 - flutter_bloc: ^9.1.1
 - sqflite: ^2.4.2
 
