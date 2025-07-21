@@ -24,7 +24,8 @@ lib/
 
 
 ## Development Environemnt
-Flutter: 3.32.7 
-Dart: 3.8.1
-OS: Ubuntu 24.04.2 LTS
-IDE: VS Code
+- Flutter: 3.32.7 
+- Dart: 3.8.1
+- OS: Ubuntu 24.04.2 LTS
+- IDE: VS Code
+- Later use MacOS, to make IoS compatible
