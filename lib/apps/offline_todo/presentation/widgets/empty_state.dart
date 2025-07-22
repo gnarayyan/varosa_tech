@@ -26,13 +26,13 @@ class EmptyState extends StatelessWidget {
               width: 120,
               height: 120,
               decoration: BoxDecoration(
-                color: _getEmptyStateColor().withOpacity(0.1),
+                color: _getEmptyStateColor().withAlpha((0.1 * 255).toInt()),
                 shape: BoxShape.circle,
               ),
               child: Icon(
                 _getEmptyStateIcon(),
                 size: 60,
-                color: _getEmptyStateColor().withOpacity(0.6),
+                color: _getEmptyStateColor().withAlpha((0.6 * 255).toInt()),
               ),
             ),
 
@@ -68,7 +68,7 @@ class EmptyState extends StatelessWidget {
                   gradient: LinearGradient(
                     colors: [
                       AppColors.primary,
-                      AppColors.primary.withOpacity(0.8),
+                      AppColors.primary.withAlpha((0.8 * 255).toInt()),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
@@ -76,7 +76,7 @@ class EmptyState extends StatelessWidget {
                   borderRadius: BorderRadius.circular(25),
                   boxShadow: [
                     BoxShadow(
-                      color: AppColors.primary.withOpacity(0.3),
+                      color: AppColors.primary.withAlpha((0.3 * 255).toInt()),
                       blurRadius: 15,
                       offset: const Offset(0, 5),
                     ),

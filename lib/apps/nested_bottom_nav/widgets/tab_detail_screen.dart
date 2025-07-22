@@ -47,15 +47,15 @@ class TabDetailScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    AppColors.success.withOpacity(0.1),
-                    AppColors.primary.withOpacity(0.1),
+                    AppColors.success.withAlpha((0.1 * 255).toInt()),
+                    AppColors.primary.withAlpha((0.1 * 255).toInt()),
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: AppColors.success.withOpacity(0.3),
+                  color: AppColors.success.withAlpha((0.3 * 255).toInt()),
                   width: 2,
                 ),
               ),
@@ -179,7 +179,9 @@ class TabDetailScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       elevation: 4,
-                      shadowColor: AppColors.primary.withOpacity(0.3),
+                      shadowColor: AppColors.primary.withAlpha(
+                        (0.3 * 255).toInt(),
+                      ),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -218,7 +220,7 @@ class TabDetailScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: AppColors.shadow.withOpacity(0.08),
+            color: AppColors.shadow.withAlpha((0.08 * 255).toInt()),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -230,7 +232,7 @@ class TabDetailScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
+              color: color.withAlpha((0.1 * 255).toInt()),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Icon(icon, color: color, size: 24),
@@ -293,10 +295,10 @@ class TabDetailScreen extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(32),
                 decoration: BoxDecoration(
-                  color: AppColors.secondary.withOpacity(0.1),
+                  color: AppColors.secondary.withAlpha((0.1 * 255).toInt()),
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: AppColors.secondary.withOpacity(0.3),
+                    color: AppColors.secondary.withAlpha((0.3 * 255).toInt()),
                     width: 2,
                   ),
                 ),

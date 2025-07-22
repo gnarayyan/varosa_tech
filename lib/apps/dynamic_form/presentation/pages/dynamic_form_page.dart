@@ -246,7 +246,7 @@ class DynamicFormView extends StatelessWidget {
         color: AppColors.surface,
         boxShadow: [
           BoxShadow(
-            color: AppColors.shadow.withOpacity(0.1),
+            color: AppColors.shadow.withAlpha((0.1 * 255).toInt()),
             blurRadius: 8,
             offset: const Offset(0, -2),
           ),
@@ -313,7 +313,9 @@ class DynamicFormView extends StatelessWidget {
                 backgroundColor: AppColors.primary,
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(vertical: 12),
-                disabledBackgroundColor: AppColors.primary.withOpacity(0.6),
+                disabledBackgroundColor: AppColors.primary.withAlpha(
+                  (0.6 * 255).toInt(),
+                ),
               ),
             ),
           ),
@@ -332,7 +334,7 @@ class DynamicFormView extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: AppColors.success.withOpacity(0.1),
+                color: AppColors.success.withAlpha((0.1 * 255).toInt()),
                 shape: BoxShape.circle,
               ),
               child: Icon(

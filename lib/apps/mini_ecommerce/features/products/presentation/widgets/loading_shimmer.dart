@@ -57,7 +57,7 @@ class _LoadingShimmerState extends State<LoadingShimmer>
                   borderRadius: BorderRadius.circular(16),
                   boxShadow: [
                     BoxShadow(
-                      color: AppColors.shadow.withOpacity(0.08),
+                      color: AppColors.shadow.withAlpha((0.08 * 255).toInt()),
                       blurRadius: 12,
                       offset: const Offset(0, 4),
                     ),
@@ -129,7 +129,7 @@ class _LoadingShimmerState extends State<LoadingShimmer>
           stops: [_animation.value - 1, _animation.value, _animation.value + 1],
           colors: [
             AppColors.background,
-            AppColors.textHint.withOpacity(0.3),
+            AppColors.textHint.withAlpha((0.3 * 255).toInt()),
             AppColors.background,
           ],
         ),
@@ -149,7 +149,7 @@ class _LoadingShimmerState extends State<LoadingShimmer>
           stops: [_animation.value - 1, _animation.value, _animation.value + 1],
           colors: [
             AppColors.background,
-            AppColors.textHint.withOpacity(0.3),
+            AppColors.textHint.withAlpha((0.3 * 255).toInt()),
             AppColors.background,
           ],
         ),

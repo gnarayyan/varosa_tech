@@ -19,7 +19,7 @@ class FavouriteErrorView extends StatelessWidget {
             Icon(
               LucideIcons.alertCircle,
               size: 64,
-              color: AppColors.error.withOpacity(0.5),
+              color: AppColors.error.withAlpha((0.5 * 255).toInt()),
             ),
             const SizedBox(height: 16),
             Text(

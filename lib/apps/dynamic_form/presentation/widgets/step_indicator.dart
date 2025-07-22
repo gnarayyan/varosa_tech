@@ -23,7 +23,7 @@ class StepIndicator extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: AppColors.shadow.withOpacity(0.05),
+            color: AppColors.shadow.withAlpha((0.05 * 255).toInt()),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -34,7 +34,7 @@ class StepIndicator extends StatelessWidget {
           // Progress bar
           LinearProgressIndicator(
             value: (currentStep + 1) / totalSteps,
-            backgroundColor: AppColors.outline.withOpacity(0.3),
+            backgroundColor: AppColors.outline.withAlpha((0.3 * 255).toInt()),
             valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
             borderRadius: BorderRadius.circular(8),
             minHeight: 8,
@@ -67,7 +67,7 @@ class StepIndicator extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: AppColors.primary.withOpacity(0.1),
+                  color: AppColors.primary.withAlpha((0.1 * 255).toInt()),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Icon(

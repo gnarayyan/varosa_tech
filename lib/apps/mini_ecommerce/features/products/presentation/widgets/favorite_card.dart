@@ -22,7 +22,7 @@ class FavoriteCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: AppColors.shadow.withOpacity(0.08),
+            color: AppColors.shadow.withAlpha((0.08 * 255).toInt()),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -117,7 +117,7 @@ class FavoriteCard extends StatelessWidget {
                 size: 20,
               ),
               style: IconButton.styleFrom(
-                backgroundColor: AppColors.error.withOpacity(0.1),
+                backgroundColor: AppColors.error.withAlpha((0.1 * 255).toInt()),
                 padding: const EdgeInsets.all(8),
                 minimumSize: const Size(36, 36),
               ),

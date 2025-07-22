@@ -68,7 +68,7 @@ class FilterChips extends StatelessWidget {
           border: Border.all(
             color: isSelected
                 ? AppColors.primary
-                : AppColors.textHint.withOpacity(0.3),
+                : AppColors.textHint.withAlpha((0.3 * 255).toInt()),
             width: 1,
           ),
         ),

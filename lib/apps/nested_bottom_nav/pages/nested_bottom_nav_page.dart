@@ -44,7 +44,7 @@ class NestedBottomNavView extends StatelessWidget {
               color: AppColors.surface,
               boxShadow: [
                 BoxShadow(
-                  color: AppColors.shadow.withOpacity(0.1),
+                  color: AppColors.shadow.withAlpha((0.1 * 255).toInt()),
                   blurRadius: 12,
                   offset: const Offset(0, -4),
                 ),
@@ -73,7 +73,7 @@ class NestedBottomNavView extends StatelessWidget {
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       color: state.selectedIndex == 0
-                          ? AppColors.primary.withOpacity(0.1)
+                          ? AppColors.primary.withAlpha((0.1 * 255).toInt())
                           : Colors.transparent,
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -91,7 +91,7 @@ class NestedBottomNavView extends StatelessWidget {
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       color: state.selectedIndex == 1
-                          ? AppColors.primary.withOpacity(0.1)
+                          ? AppColors.primary.withAlpha((0.1 * 255).toInt())
                           : Colors.transparent,
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -109,7 +109,7 @@ class NestedBottomNavView extends StatelessWidget {
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       color: state.selectedIndex == 2
-                          ? AppColors.primary.withOpacity(0.1)
+                          ? AppColors.primary.withAlpha((0.1 * 255).toInt())
                           : Colors.transparent,
                       borderRadius: BorderRadius.circular(12),
                     ),

@@ -27,13 +27,16 @@ class TodoItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withAlpha((0.05 * 255).toInt()),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
         ],
         border: isOverdue
-            ? Border.all(color: AppColors.error.withOpacity(0.3), width: 1)
+            ? Border.all(
+                color: AppColors.error.withAlpha((0.3 * 255).toInt()),
+                width: 1,
+              )
             : null,
       ),
       child: Material(
@@ -128,7 +131,7 @@ class TodoItem extends StatelessWidget {
                             decoration: BoxDecoration(
                               color: _getPriorityColor(
                                 todo.priority,
-                              ).withOpacity(0.1),
+                              ).withAlpha((0.1 * 255).toInt()),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Row(
@@ -161,8 +164,12 @@ class TodoItem extends StatelessWidget {
                               ),
                               decoration: BoxDecoration(
                                 color: isOverdue
-                                    ? AppColors.error.withOpacity(0.1)
-                                    : AppColors.info.withOpacity(0.1),
+                                    ? AppColors.error.withAlpha(
+                                        (0.1 * 255).toInt(),
+                                      )
+                                    : AppColors.info.withAlpha(
+                                        (0.1 * 255).toInt(),
+                                      ),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Row(

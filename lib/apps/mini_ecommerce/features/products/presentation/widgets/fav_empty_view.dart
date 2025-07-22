@@ -16,7 +16,7 @@ class FavEmptyView extends StatelessWidget {
             Icon(
               LucideIcons.heart,
               size: 64,
-              color: AppColors.textHint.withOpacity(0.5),
+              color: AppColors.textHint.withAlpha((0.5 * 255).toInt()),
             ),
             const SizedBox(height: 16),
             Text(

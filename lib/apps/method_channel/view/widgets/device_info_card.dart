@@ -20,7 +20,7 @@ class DeviceInfoCard extends StatelessWidget {
         border: Border.all(color: AppColors.outline, width: 1),
         boxShadow: [
           BoxShadow(
-            color: AppColors.shadow.withOpacity(0.1),
+            color: AppColors.shadow.withAlpha((0.1 * 255).toInt()),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -69,7 +69,6 @@ class DeviceInfoCard extends StatelessWidget {
       ),
     );
   }
-
 
   Color _getBatteryColor() {
     if (deviceInfo.batteryLevel >= 70) {

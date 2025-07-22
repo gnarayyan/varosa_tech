@@ -45,7 +45,9 @@ class ReviewStep extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.outline.withOpacity(0.5)),
+        border: Border.all(
+          color: AppColors.outline.withAlpha((0.5 * 255).toInt()),
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

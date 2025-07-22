@@ -16,7 +16,7 @@ class _EcommerceSearchBarState extends State<EcommerceSearchBar> {
   final TextEditingController _searchController = TextEditingController();
   final ValueNotifier<String> _query = ValueNotifier<String>('');
   Timer? _debounceTimer;
-  
+
   // Debounce duration in milliseconds
   static const Duration _debounceDuration = Duration(milliseconds: 500);
 
@@ -30,10 +30,10 @@ class _EcommerceSearchBarState extends State<EcommerceSearchBar> {
 
   void _onSearchChanged(String query) {
     _query.value = query.trim();
-    
+
     // Cancel the previous timer if it exists
     _debounceTimer?.cancel();
-    
+
     // Create a new timer for debouncing
     _debounceTimer = Timer(_debounceDuration, () {
       if (mounted) {
@@ -55,7 +55,7 @@ class _EcommerceSearchBarState extends State<EcommerceSearchBar> {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: AppColors.shadow.withOpacity(0.1),
+            color: AppColors.shadow.withAlpha((0.1 * 255).toInt()),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),

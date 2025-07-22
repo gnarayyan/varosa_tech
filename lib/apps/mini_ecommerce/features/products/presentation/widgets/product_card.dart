@@ -48,7 +48,7 @@ class _ProductCardState extends State<ProductCard> {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: AppColors.shadow.withOpacity(0.08),
+              color: AppColors.shadow.withAlpha((0.08 * 255).toInt()),
               blurRadius: 12,
               offset: const Offset(0, 4),
             ),
@@ -103,11 +103,15 @@ class _ProductCardState extends State<ProductCard> {
                       child: Container(
                         padding: const EdgeInsets.all(6),
                         decoration: BoxDecoration(
-                          color: AppColors.surface.withOpacity(0.9),
+                          color: AppColors.surface.withAlpha(
+                            (0.9 * 255).toInt(),
+                          ),
                           shape: BoxShape.circle,
                           boxShadow: [
                             BoxShadow(
-                              color: AppColors.shadow.withOpacity(0.1),
+                              color: AppColors.shadow.withAlpha(
+                                (0.1 * 255).toInt(),
+                              ),
                               blurRadius: 4,
                               offset: const Offset(0, 2),
                             ),
@@ -263,14 +267,14 @@ class _ProductCardState extends State<ProductCard> {
     });
   }
 
-  String _formatCategoryName(String category) {
-    return category
-        .split(' ')
-        .map(
-          (word) => word.isNotEmpty
-              ? '${word[0].toUpperCase()}${word.substring(1)}'
-              : word,
-        )
-        .join(' ');
-  }
+  // String _formatCategoryName(String category) {
+  //   return category
+  //       .split(' ')
+  //       .map(
+  //         (word) => word.isNotEmpty
+  //             ? '${word[0].toUpperCase()}${word.substring(1)}'
+  //             : word,
+  //       )
+  //       .join(' ');
+  // }
 }

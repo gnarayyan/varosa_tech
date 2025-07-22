@@ -115,7 +115,7 @@ class _ProductGridState extends State<ProductGrid> {
             Icon(
               Icons.error_outline,
               size: 64,
-              color: AppColors.error.withOpacity(0.5),
+              color: AppColors.error.withAlpha((0.5 * 255).toInt()),
             ),
             const SizedBox(height: 16),
             Text(
@@ -164,7 +164,7 @@ class _ProductGridState extends State<ProductGrid> {
             Icon(
               Icons.shopping_bag_outlined,
               size: 64,
-              color: AppColors.textHint.withOpacity(0.5),
+              color: AppColors.textHint.withAlpha((0.5 * 255).toInt()),
             ),
             const SizedBox(height: 16),
             Text(

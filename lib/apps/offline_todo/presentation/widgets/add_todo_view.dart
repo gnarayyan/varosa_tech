@@ -46,7 +46,7 @@ class _AddTodoViewState extends State<AddTodoView> {
             //     Container(
             //       padding: const EdgeInsets.all(8),
             //       decoration: BoxDecoration(
-            //         color: AppColors.primary.withOpacity(0.1),
+            //         color: AppColors.primary.withAlpha((0.1* 255).toInt()),
             //         borderRadius: BorderRadius.circular(12),
             //       ),
             //       child: Icon(
@@ -152,7 +152,9 @@ class _AddTodoViewState extends State<AddTodoView> {
             Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                border: Border.all(color: AppColors.textHint.withOpacity(0.3)),
+                border: Border.all(
+                  color: AppColors.textHint.withAlpha((0.3 * 255).toInt()),
+                ),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Material(
@@ -223,7 +225,7 @@ class _AddTodoViewState extends State<AddTodoView> {
                     gradient: LinearGradient(
                       colors: [
                         AppColors.primary,
-                        AppColors.primary.withOpacity(0.8),
+                        AppColors.primary.withAlpha((0.8 * 255).toInt()),
                       ],
                     ),
                     borderRadius: BorderRadius.circular(25),
@@ -277,7 +279,7 @@ class _AddTodoViewState extends State<AddTodoView> {
           duration: const Duration(milliseconds: 200),
           padding: const EdgeInsets.symmetric(vertical: 12),
           decoration: BoxDecoration(
-            color: isSelected ? color : color.withOpacity(0.1),
+            color: isSelected ? color : color.withAlpha((0.1 * 255).toInt()),
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: color, width: isSelected ? 2 : 1),
           ),

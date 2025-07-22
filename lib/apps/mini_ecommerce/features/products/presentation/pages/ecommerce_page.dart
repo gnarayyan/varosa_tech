@@ -41,7 +41,6 @@ class EcommerceView extends StatefulWidget {
 class _EcommerceViewState extends State<EcommerceView>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
- 
 
   @override
   void initState() {
@@ -52,7 +51,7 @@ class _EcommerceViewState extends State<EcommerceView>
   @override
   void dispose() {
     _tabController.dispose();
-  
+
     super.dispose();
   }
 
@@ -84,7 +83,9 @@ class _EcommerceViewState extends State<EcommerceView>
             controller: _tabController,
             indicatorColor: AppColors.onPrimary,
             labelColor: AppColors.onPrimary,
-            unselectedLabelColor: AppColors.onPrimary.withOpacity(0.7),
+            unselectedLabelColor: AppColors.onPrimary.withAlpha(
+              (0.7 * 255).toInt(),
+            ),
             tabs: const [
               Tab(icon: Icon(LucideIcons.store), text: 'Products'),
               Tab(icon: Icon(LucideIcons.heart), text: 'Favorites'),
@@ -103,9 +104,7 @@ class _EcommerceViewState extends State<EcommerceView>
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(16.0),
-                        child: EcommerceSearchBar(
-                       
-                        ),
+                        child: EcommerceSearchBar(),
                       ),
                       const CategoryFilter(),
                       const SizedBox(height: 8),
